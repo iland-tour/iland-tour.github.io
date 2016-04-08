@@ -1,30 +1,15 @@
 <?php
-    header("Content-type: text/html; charset=utf8");
-	$name =  $_POST['name'];
-	$txt =  $_POST['text'];
-	$phone = $_POST['tel'];
-	$mailto = 'southjuniper@gmail.com';
+    $recepient = "southjuniper@gmail.com";
+	$sitename = "Название сайта";
 
-	if(isset($phone)) {
-		
-		if(empty($name)) {
-			$name = "Не указано";
-		}
-		if(empty($txt)) {
-			$txt = "Не указано";
-		}
-		if(empty($phone)) {
-			$phone = "Не указано";
-		}
-		
-		$topic = "Заявка на обратный звонок";
-		$message = "Имя: {$name}\nСообщение: {$txt}\nНомер телефона: {$phone}";
-		
-		
-			
-		mail($mailto, $topic, $message);
-			
-		
-		
-	}
+	$name = trim($_POST["name"]);
+	$phone = trim($_POST["tel"]);
+	$text = trim($_POST["text"]);
+	
+
+	$message = "Имя: $name \nТелефон: $phone \nТекст: $text \nЗайстройщик, Город: $business";
+
+	$pagetitle = "Новая заявка с сайта \"$sitename\"";
+	
+	mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
 ?>
