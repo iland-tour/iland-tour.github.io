@@ -3,13 +3,13 @@
 
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=1200">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Айлэнд Тур</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<link sizes="32x32" href="favicon.png" rel="icon" type="image/png">
-		<link href="assets/styles/app.min.css?t=1459455497303" rel="stylesheet">
+		<link href="assets/styles/app.css?t=1459455497303" rel="stylesheet">
 		<link href="assets/styles/animate.css" rel="stylesheet">
 	</head>
 
@@ -31,7 +31,7 @@
 							</div>
 							<div class="tel">+7 (843)
 								<span>248-36-28</span>
-								<a href="" class="call">заказать звонок</a>
+								<a href="" class="call js-call">заказать звонок</a>
 							</div>
 						</div>
 					</div>
@@ -172,7 +172,7 @@
 							<h2>ОСТАЛИСЬ ВОПРОСЫ ?</h2>
 							<p>Оставьте заявку и мы ответим на все ваши вопросы!</p>
 						</div>
-						<a href="" class="btn">Оставить заявку</a>
+						<a href="" class="btn js-call">Оставить заявку</a>
 						<p>Мы перезвоним вам в течение 20 минут!</p>
 					</div>
 					<div id="up" class="up"></div>
@@ -189,28 +189,28 @@
 						</div>
 						<div class="tel">+7 (843)
 							<span>248-36-28</span>
-							<a href="" class="call">заказать звонок</a>
+							<a href="" class="call js-call">заказать звонок</a>
 						</div>
 					</div>
 					<div class="footer__wrap">
 						<div class="footer__hippa">Политика конфедициальности</div>
 						<div class="form">
-							<form>
+							<form class="js-form">
 								<h2>НАПИСАТЬ НАМ</h2>
 								<div class="form__wrap">
 									<div class="form__item">
 										<div class="form__input-wrap">
 											<label for="input-name">Имя</label>
-											<input type="text" id="input-name" placeholder="Введите ваше имя" required>
+											<input type="text" id="input-name" name="name" placeholder="Введите ваше имя" required>
 										</div>
 										<div class="form__input-wrap">
 											<label for="input-tel">Телефон</label>
-											<input type="text" id="input-tel" placeholder="Введите ваш телефон" required>
+											<input type="text" id="input-tel" class="js-tel" name='tel' placeholder="Введите ваш телефон" required>
 										</div>
 									</div>
 									<div class="form__item">
 										<label for="input-area">Сообщение</label>
-										<textarea id="input-area" placeholder="Введите ваше сообщение"></textarea>
+										<textarea id="input-area" name="text" placeholder="Введите ваше сообщение"></textarea>
 									</div>
 									<button href="" type="submit" class="form__btn">НАПИСАТЬ</button>
 								</div>
@@ -220,6 +220,32 @@
 				</div>
 			</footer>
 		</div>
+		<div class="popup_overlay">
+            <div data-popup="" class="popup_item">
+	            <div class="popup_close">×</div>
+	            <div class="form">
+							<form class="js-form">
+								<h2>Оставить заявку</h2>
+								<div class="form__wrap">
+									<div class="form__item">
+										<div class="form__input-wrap">
+											<label for="input-name">Имя</label>
+											<input type="text" id="input-name" name="name" placeholder="Введите ваше имя" required>
+										</div>
+										<div class="form__input-wrap">
+											<label for="input-tel">Телефон</label>
+											<input type="text" class="js-tel" id="input-tel" name="tel" placeholder="Введите ваш телефон" required>
+										</div>
+									</div>
+									
+									<button href="" type="submit" class="form__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+								</div>
+							</form>
+						</div>
+        	</div>
+        </div>
+		<script src="assets/scripts/jquery-1.12.3.min.js"></script>
+		<script src="assets/scripts/jquery.maskedinput.min.js"></script>
 		<script src="assets/scripts/app.min.js"></script>
 	</body>
 
